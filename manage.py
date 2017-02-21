@@ -20,6 +20,7 @@ def test():
     tests = unittest.TestLoader().discover('tests')
     unittest.TextTestRunner(verbosity=2).run(tests)
 
+@manager.command
 def profile(length=25, profile_dir=None):
     """Start the application under the code profiler."""
     from werkzeug.contrib.profiler import ProfilerMiddleware
